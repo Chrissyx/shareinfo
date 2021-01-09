@@ -4,7 +4,7 @@ object AboutBox: TAboutBox
   BorderStyle = bsDialog
   Caption = #220'ber ShareInfo...'
   ClientHeight = 318
-  ClientWidth = 299
+  ClientWidth = 494
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -13,8 +13,105 @@ object AboutBox: TAboutBox
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 14
+  object lbSpeicher1: TLabel
+    Left = 304
+    Top = 40
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbSpeicher2: TLabel
+    Left = 304
+    Top = 64
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbSpeicher4: TLabel
+    Left = 304
+    Top = 120
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbSpeicher5: TLabel
+    Left = 304
+    Top = 144
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbSpeicher7: TLabel
+    Left = 304
+    Top = 200
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbSpeicher8: TLabel
+    Left = 304
+    Top = 224
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbSpeicher3: TLabel
+    Left = 304
+    Top = 88
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbSpeicher6: TLabel
+    Left = 304
+    Top = 176
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
   object Panel1: TPanel
     Left = 8
     Top = 8
@@ -451,9 +548,9 @@ object AboutBox: TAboutBox
     object Copyright: TLabel
       Left = 8
       Top = 80
-      Width = 126
+      Width = 130
       Height = 14
-      Caption = #169' 2004, 2005 by Chrissyx'
+      Caption = #169' 2004 - 2007 by Chrissyx'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -480,10 +577,10 @@ object AboutBox: TAboutBox
     object Label1: TLabel
       Left = 8
       Top = 120
-      Width = 140
+      Width = 143
       Height = 14
       Cursor = crHandPoint
-      Caption = 'http://www.chrissyx.de(.vu)'
+      Caption = 'http://www.chrissyx.de(.vu)/'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -495,10 +592,10 @@ object AboutBox: TAboutBox
     object Label2: TLabel
       Left = 8
       Top = 136
-      Width = 125
+      Width = 128
       Height = 14
       Cursor = crHandPoint
-      Caption = 'http://www.chrissyx.com'
+      Caption = 'http://www.chrissyx.com/'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -536,16 +633,16 @@ object AboutBox: TAboutBox
     object Label4: TLabel
       Left = 88
       Top = 56
-      Width = 157
+      Width = 182
       Height = 14
-      Caption = 'Unterst'#252'tzt Torrent und eDonkey'
+      Caption = 'Unterst'#252'tzt Torrent, eDonkey, Sig2Dat'
     end
     object edVersion: TLabel
       Left = 128
       Top = 40
       Width = 33
       Height = 14
-      Caption = '1.0.4.1'
+      Caption = '1.1.2.0'
     end
     object Label6: TLabel
       Left = 8
@@ -592,5 +689,14 @@ object AboutBox: TAboutBox
     ParentFont = False
     TabOrder = 1
     OnClick = OKButtonClick
+  end
+  object btSpeicher: TButton
+    Left = 200
+    Top = 284
+    Width = 73
+    Height = 25
+    Caption = 'Speicher >>'
+    TabOrder = 2
+    OnClick = btSpeicherClick
   end
 end

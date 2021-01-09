@@ -1,8 +1,8 @@
 object Optionen: TOptionen
   Left = 192
   Top = 106
-  Width = 271
-  Height = 150
+  Width = 249
+  Height = 132
   Caption = 'ShareInfo - Optionen'
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -15,8 +15,8 @@ object Optionen: TOptionen
   PixelsPerInch = 96
   TextHeight = 16
   object lbSprache: TLabel
-    Left = 16
-    Top = 16
+    Left = 8
+    Top = 8
     Width = 52
     Height = 16
     Caption = 'Sprache:'
@@ -28,8 +28,8 @@ object Optionen: TOptionen
     ParentFont = False
   end
   object ComboBox1: TComboBox
-    Left = 96
-    Top = 16
+    Left = 88
+    Top = 8
     Width = 145
     Height = 24
     Font.Charset = ANSI_CHARSET
@@ -47,8 +47,8 @@ object Optionen: TOptionen
       'Norwegisch')
   end
   object cbCanClose: TCheckBox
-    Left = 24
-    Top = 48
+    Left = 16
+    Top = 40
     Width = 217
     Height = 17
     Caption = 'Beim Beenden nachfragen?'
@@ -61,10 +61,10 @@ object Optionen: TOptionen
     TabOrder = 1
   end
   object btOK: TButton
-    Left = 72
-    Top = 80
-    Width = 113
-    Height = 33
+    Left = 48
+    Top = 72
+    Width = 145
+    Height = 25
     Caption = 'OK'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText

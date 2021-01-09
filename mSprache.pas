@@ -20,6 +20,7 @@ LngBadTorrent: PChar;
 LngNoDatabank: PChar;
 LngNoEntry: string;
 LngBadeDonkeyLink: PChar;
+LngBadSig2DatLink: PChar;
 LngInsertLink: PChar;
 LngNewVersion: PChar;
 LngUpdaten: PChar;
@@ -47,7 +48,7 @@ begin
          ShareInfo.MainMenu1.Items[0][0].Caption := 'Optionen...';
          ShareInfo.MainMenu1.Items[0][2].Caption := 'Beenden';
          ShareInfo.MainMenu1.Items[2].Caption := 'Hilfe';
-         ShareInfo.MainMenu1.Items[2][1].Caption := 'Update Prüfung';
+         ShareInfo.MainMenu1.Items[2][2].Caption := 'Update Prüfung';
          //--------------------------Layout--------------------------//
          //ShareInfo
          ShareInfo.Label1.Caption := 'Torrent Datei:';
@@ -69,13 +70,20 @@ begin
          ShareInfo.Label13.Caption := 'Dateiname:';
          ShareInfo.Label15.Caption := 'Größe:';
          ShareInfo.Label16.Caption := 'Inhalt:';
+         ShareInfo.btSig2Dat.Caption := 'Sig2Dat Link checken';
+         ShareInfo.Label22.Caption := 'Dateiname:';
+         ShareInfo.Label20.Caption := 'Größe';
+         ShareInfo.Label23.Caption := 'Inhalt:';
+         ShareInfo.Label24.Caption := 'Quellen:';
+         ShareInfo.Label25.Caption := 'Verfügbarkeit:';
          //Optionen
          Optionen.lbSprache.Caption := 'Sprache:';
          Optionen.ComboBox1.Items[0] := 'Deutsch';
          Optionen.ComboBox1.Items[1] := 'Englisch';
+         Optionen.ComboBox1.Items[2] := 'Norwegisch';
          Optionen.cbCanClose.Caption := 'Beim Beenden nachfragen?';
          //AboutBox
-         Aboutbox.Label4.Caption := 'Unterstützt Torrent und eDonkey';
+         Aboutbox.Label4.Caption := 'Unterstützt Torrent, eDonkey, Sig2Dat';
          Aboutbox.Label3.Caption := 'ShareInfo nutzt Programmroutinen von BDecode,';
          Aboutbox.Label5.Caption := 'Hashes und MessageDigests.';
          Aboutbox.Label6.Caption := 'Übersetzung:';
@@ -102,6 +110,7 @@ begin
          LngNoDatabank := PChar('Konnte Online Datenbank nicht abfragen! Bitte Verbindung prüfen oder später erneut versuchen!');
          LngNoEntry := 'Kein Eintrag gefunden, ggf. Verbindung prüfen.';
          LngBadeDonkeyLink := PChar('Ungültiger eDonkey Link!');
+         LngBadSig2DatLink := PChar('Ungültiger Sig2Dat Link!');
          LngInsertLink := PChar('Bitte Link einfügen!');
          LngNewVersion := PChar('Es ist eine neuere Version verfügbar!' + char(13) + 'Möchtest Du sie laden?');
          LngUpdaten := PChar('Updaten?');
@@ -122,7 +131,7 @@ begin
          ShareInfo.MainMenu1.Items[0][0].Caption := 'Options...';
          ShareInfo.MainMenu1.Items[0][2].Caption := 'Exit';
          ShareInfo.MainMenu1.Items[2].Caption := 'Help';
-         ShareInfo.MainMenu1.Items[2][1].Caption := 'Update check';
+         ShareInfo.MainMenu1.Items[2][2].Caption := 'Update check';
          //--------------------------Layout--------------------------//
          //ShareInfo
          ShareInfo.Label1.Caption := 'Torrent file:';
@@ -144,13 +153,20 @@ begin
          ShareInfo.Label13.Caption := 'Filename:';
          ShareInfo.Label15.Caption := 'Size:';
          ShareInfo.Label16.Caption := 'Content:';
+         ShareInfo.btSig2Dat.Caption := 'Check Sig2Dat link';
+         ShareInfo.Label22.Caption := 'Filename:';
+         ShareInfo.Label20.Caption := 'Size:';
+         ShareInfo.Label23.Caption := 'Content:';
+         ShareInfo.Label24.Caption := 'Sources:';
+         ShareInfo.Label25.Caption := 'Availability:';
          //Options
          Optionen.lbSprache.Caption := 'Language:';
          Optionen.ComboBox1.Items[0] := 'German';
          Optionen.ComboBox1.Items[1] := 'English';
+         Optionen.ComboBox1.Items[2] := 'Norwegian';
          Optionen.cbCanClose.Caption := 'With exiting ask?';
          //AboutBox
-         Aboutbox.Label4.Caption := 'Supports Torrent and eDonkey';
+         Aboutbox.Label4.Caption := 'Supports Torrent, eDonkey, Sig2Dat';
          Aboutbox.Label3.Caption := 'ShareInfo uses program routines from BDecode,';
          Aboutbox.Label5.Caption := 'Hashes and MessageDigests.';
          Aboutbox.Label6.Caption := 'Translation:';
@@ -164,8 +180,8 @@ begin
          //ShareInfo
          LngNoTracker := 'ERROR: No tracker found!';
          LngNoComment := 'ERROR: No comment found!';
-         LngNoCreationDate := 'ERROR: No creation date forund!';
-         LngNoFilename := 'ERROR: No filename forund!';
+         LngNoCreationDate := 'ERROR: No creation date found!';
+         LngNoFilename := 'ERROR: No filename found!';
          LngFilelength1 := PChar('Filelength of ');
          LngFilelength2 := PChar(' not found!');
          LngNoPath1 := PChar('File ');
@@ -177,6 +193,7 @@ begin
          LngNoDatabank := PChar('No route to online databank! Please check your connection or try again later!');
          LngNoEntry := 'No Entry found! Check connection?';
          LngBadeDonkeyLink := PChar('No valid eDonkey link!');
+         LngBadSig2DatLink := PChar('No valid Sig2Dat link!');
          LngInsertLink := PChar('Please insert link!');
          LngNewVersion := PChar('A new version is available!' + char(13) + 'You want to load it?');
          LngUpdaten := PChar('Update program?');
@@ -197,7 +214,7 @@ begin
          ShareInfo.MainMenu1.Items[0][0].Caption := 'Alternativer...';
          ShareInfo.MainMenu1.Items[0][2].Caption := 'Avslutt';
          ShareInfo.MainMenu1.Items[2].Caption := 'Hjelp';
-         ShareInfo.MainMenu1.Items[2][1].Caption := 'Sjekk for oppdateringer';
+         ShareInfo.MainMenu1.Items[2][2].Caption := 'Sjekk for oppdateringer';
          //--------------------------Layout--------------------------//
          //ShareInfo
          ShareInfo.Label1.Caption := 'Torrent fil:';
@@ -219,6 +236,12 @@ begin
          ShareInfo.Label13.Caption := 'Filnavn:';
          ShareInfo.Label15.Caption := 'Størrelse:';
          ShareInfo.Label16.Caption := 'Innhold:';
+         ShareInfo.btSig2Dat.Caption := 'Sjekk Sig2Dat link';
+         ShareInfo.Label22.Caption := 'Filnavn:';
+         ShareInfo.Label20.Caption := 'Størrelse:';
+         ShareInfo.Label23.Caption := 'Innhold:';
+         ShareInfo.Label24.Caption := 'Sources:'; //TRANSLATE!!!!
+         ShareInfo.Label25.Caption := 'Availability:'; //TRANSLATE!!!!
          //Options
          Optionen.lbSprache.Caption := 'Språk:';
          Optionen.ComboBox1.Items[0] := 'Tysk';
@@ -226,7 +249,7 @@ begin
          Optionen.ComboBox1.Items[2] := 'Norsk';
          Optionen.cbCanClose.Caption := 'Med avslutnings bedskjed?';
          //AboutBox
-         Aboutbox.Label4.Caption := 'Støtter Torrent og eDonkey';
+         Aboutbox.Label4.Caption := 'Støtter Torrent, eDonkey og Sig2Dat';
          Aboutbox.Label3.Caption := 'ShareInfo bruker program rutiner fra BDecode,';
          Aboutbox.Label5.Caption := 'Hashes og MessageDigests.';
          Aboutbox.Label6.Caption := 'Oversatt av:';
@@ -253,6 +276,7 @@ begin
          LngNoDatabank := PChar('Ingen bane til databank! Vennligst sjekk din tilkobling, eller prøv igjen senere!');
          LngNoEntry := 'Ingen adgang funnet! Sjekk din tilkobling?';
          LngBadeDonkeyLink := PChar('Ikke en gyldig eDonkey link!');
+         LngBadSig2DatLink := PChar('Ikke en gyldig Sig2Dat link!');
          LngInsertLink := PChar('Vennligst skriv inn link!');
          LngNewVersion := PChar('En ny versjon er tilgjengelig!' + char(13) + 'Vil du laste den ned?');
          LngUpdaten := PChar('Oppdater programm?');
